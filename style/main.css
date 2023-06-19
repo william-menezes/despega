@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-50: #ebf5ff;
+    --primary-100: #e1effe;
+    --primary-200: #c3ddfd;
+    --primary-300: #a4cafe;
+    --primary-400: #76a9fa;
+    --primary-500: #3f83f8;
+    --primary-600: #1c64f2;
+    --primary-700: #1a56db;
+    --primary-800: #1e429f;
+    --primary-900: #233876;
+
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2A37;
+    --gray-900: #111928;
+
+    --red-50: #fdf2f2;
+    --red-100: #fde8e8;
+    --red-200: #fbd5d5;
+    --red-300: #f8b4b4;
+    --red-400: #f98080;
+    --red-500: #f05252;
+    --red-600: #e02424;
+    --red-700: #c81e1e;
+    --red-800: #9b1c1c;
+    --red-900: #771d1d;
+
+    --green-50: #F3FAF7;
+    --green-100: #DEF7EC;
+    --green-200: #BCF0DA;
+    --green-300: #84E1BC;
+    --green-400: #31C48D;
+    --green-500: #0E9F6E;
+    --green-600: #057A55;
+    --green-700: #046C4E;
+    --green-800: #03543F;
+    --green-900: #014737;
+
+    --yellow-50: #FDFDEA;
+    --yellow-100: #FDF6B2;
+    --yellow-200: #FCE96A;
+    --yellow-300: #FACA15;
+    --yellow-400: #E3A008;
+    --yellow-500: #C27803;
+    --yellow-600: #9F580A;
+    --yellow-700: #8E4B10;
+    --yellow-800: #723B13;
+    --yellow-900: #633112;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /*     background-color: #111827;
+    color: var(--primary-500); */
+    font-family: 'Inter', sans-serif;
+}
+
+.alert {
+    max-width: 896px;
+    padding: 16px;
+    border-radius: 6px;
+    line-height: 150%;
+
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.alert__header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert__title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.alert__title i {
+    margin-right: 8px;
+}
+
+.alert__body {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.alert--success {
+    background-color: var(--green-100);
+    color: var(--green-700);
+}
+
+.alert--danger {
+    background-color: var(--red-100);
+    color: var(--red-700);
+}
+
+.alert--info {
+    background-color: var(--primary-100);
+    color: var(--primary-700);
+}
+
+.alert--warning {
+    background-color: var(--yellow-100);
+    color: var(--yellow-700);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* BUTTONS SIZE */
+.button--xs {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+}
+
+.button--sm {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+}
+
+.button--md {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+}
+
+.button--lg {
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.button--xl {
+    padding: 14px 24px;
+    font-size: 1rem;
+}
+
+/* FAB BUTTONS SIZE */
+.fab {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    border-radius: 100%;
+}
+
+.fab--xs {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.fab--sm {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 0.875rem;
+}
+
+.fab--md {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    font-size: 0.875rem;
+}
+
+.fab--lg {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.fab--xl {
+    width: 52px;
+    height: 52px;
+    padding: 14px;
+    font-size: 1rem;
+}
+
+/* STYLES BUTTONS */
+/* PRIMARY BUTTON */
+.button--primary {
+    color: #ffffff;
+    background-color: var(--primary-700);
+}
+
+.button--primary:hover {
+    background-color: var(--primary-800);
+}
+
+.button--primary:focus {
+    background-color: var(--primary-800);
+    outline: 3px solid var(--primary-300);
+}
+
+.button--primary:disabled {
+    background-color: var(--primary-300);
+}
+
+/* PRIMARY OUTLINE BUTTON */
+.button--primary--outline {
+    color: var(--primary-700);
+    background-color: #ffffff;
+    border: 1px solid var(--primary-700);
+}
+
+.button--primary--outline:hover {
+    color: #ffffff;
+    background-color: var(--primary-800);
+}
+
+.button--primary--outline:focus {
+    background-color: var(--primary-800);
+    outline: 3px solid var(--primary-200);
+}
+
+.button--primary--outline:disabled {
+    background-color: var(--primary-300);
+}
+
+/* DANGER BUTTON */
+.button--danger {
+    color: #ffffff;
+    background-color: var(--red-700);
+}
+
+.button--danger:hover {
+    background-color: var(--red-800);
+}
+
+.button--danger:focus {
+    background-color: var(--red-800);
+    outline: 3px solid var(--red-200);
+}
+
+.button--danger:disabled {
+    background-color: var(--red-200);
+}
+
+
+/* CHAT BUBBLE */
+.chat-bubble {
+    width: 332px;
+    border-radius: 0 20px 20px;
+    padding: 16px;
+    background-color: var(--gray-100);
+}
+
+.chat-bubble__header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat-bubble__sender {
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-right: 6px;
+}
+
+.chat-bubble__time,
+.chat-bubble__footer {
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--gray-500);
+}
+
+.chat-bubble__body {
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 400;
+    color: var(--gray-900);
+    margin-bottom: 10px;
+}
+
+
+/* BREADCRUMB */
+.breadcrumb {
+    width: fit-content;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--gray-200);
+    background-color: var(--gray-50);
+}
+
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb ul li {
+    display: inline-block;
+    padding: 0;
+
+}
+
+
+.breadcrumb__link:not(:last-child):after {
+    content: url(../assets/icons/chevron-right.svg);
+    float: right;
+    margin: 0 16px;
+}
+
+.breadcrumb__link a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    line-height: 150%;
+}
+
+.breadcrumb__link--active a {
+    color: #6b7280;
+}
+
+.breadcrumb__link:first-child a::before {
+    content: url(../assets/icons/home.svg);
+    float: left;
+    margin-right: 16px;
+    height: 21px;
+}
+
+
+/* FORM FIELDS */
+input,
+select,
+textarea {
+    background-color: var(--gray-50);
+    border-radius: 8px;
+    border: 1px solid var(--gray-300);
+    font: 400 0.875rem/150% "Inter", sans-serif;
+    color: var(--gray-900);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border: 1px solid var(--primary-600);
+    outline: none;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    background-color: var(--red-50);
+    border: 1px solid var(--red-500);
+    outline: none;
+    color: var(--red-700);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    color: var(--gray-400);
+}
+
+textarea {
+    min-height: 155px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    background-color: var(--red-500);
+    border: 1px solid var(--gray-300);
+    accent-color: var(--primary-600);
+    width: fit-content;
+}
+
+::placeholder {
+    color: var(--gray-500);
+}
+
+/* INPUT SIZES */
+.input--sm {
+    height: 37px;
+    padding: 8px 16px;
+}
+
+.input--md {
+    height: 42px;
+    padding: 12px 16px;
+}
+
+.input--lg {
+    height: 52px;
+    padding: 14px 16px;
+    font-size: 1rem;
+}
+
+/* LABEL AND HINT */
+.label--inline {
+    display: inline-block;
+    margin: 0;
+}
+
+.label--block {
+    display: block;
+    font: 500 0.875rem/150% "Inter", sans-serif;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+}
+
+.hint {
+    display: block;
+    font: 400 0.875rem/150% "Inter", sans-serif;
+    color: var(--gray-500);
+    margin-top: 8px;
+}
+
+.hint--error {
+    color: var(--red-600);
+}
+
+.hint--link {
+    text-decoration: none;
+    color: var(--gray-900);
+}
+
+.form-field {
+    margin-bottom: 16px;
+}
+
+.form-field>input:not(input[type="radio"], input[type="checkbox"]),
+select,
+textarea,
+label,
+.hint {
+    box-sizing: border-box;
+    width: 100%;
+}
