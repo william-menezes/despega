@@ -102,6 +102,7 @@ h4 {
 h5 {
   font-size: 1.333rem;
 }
+
 p {
   color: var(--gray-500);
 }
@@ -171,12 +172,15 @@ a {
   color: var(--primary-600);
   font-weight: 500;
 }
+
 .link--primary:hover {
   text-decoration: underline;
 }
+
 .link--primary:visited {
   color: var(--primary-600);
 }
+
 .link--primary:focus {
   outline: 3px solid var(--primary-300);
   border-radius: 2px;
@@ -187,6 +191,7 @@ a {
   font-weight: 500;
   margin: 0 16px;
 }
+
 .link--secondary:hover {
   color: var(--primary-600);
 }
@@ -248,7 +253,7 @@ button {
   border-radius: 100%;
 }
 
-.fab > i {
+.fab>i {
   pointer-events: none;
 }
 
@@ -285,6 +290,14 @@ button {
   height: 52px;
   padding: 14px;
   font-size: 1rem;
+}
+
+.button-icon--left i {
+  margin-right: 8px;
+}
+
+.button-icon--right i {
+  margin-left: 8px;
 }
 
 /* STYLES BUTTONS */
@@ -326,6 +339,24 @@ button {
 
 .button--primary--outline:disabled {
   background-color: var(--primary-300);
+}
+
+/* SECONDARY BUTTON */
+.button--secondary {
+  color: var(--gray-800);
+  background-color: var(--gray-200);
+}
+.button--secondary:hover {
+  background-color: var(--gray-300);
+  border: 1px solid var(--gray-100);
+}
+.button--secondary:focus {
+  background-color: var(--gray-300);
+  outline: 3px solid var(--gray-100);
+}
+.button--secondary:disabled {
+  background-color: var(--gray-300);
+  color: var(--gray-400);
 }
 
 /* DANGER BUTTON */
@@ -529,7 +560,7 @@ input[type="checkbox"] {
   margin-bottom: 16px;
 }
 
-.form-field > input:not(input[type="radio"], input[type="checkbox"]),
+.form-field>input:not(input[type="radio"], input[type="checkbox"]),
 select,
 textarea,
 label,
@@ -543,10 +574,14 @@ label,
   position: relative;
   display: inline-block;
 }
+
 .dropdown__options {
   display: none;
   position: absolute;
   overflow: auto;
+
+  top: 40px;
+  z-index: 2;
 
   min-width: 224px;
   padding: 12px 16px;
@@ -556,9 +591,11 @@ label,
 
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
+
 .dropdown__options--float-right {
   right: 0;
 }
+
 /* .dropdown:hover .dropdown__options {
   display: block;
 } */
@@ -567,46 +604,100 @@ label,
   padding-bottom: 12px;
   border-bottom: 1px solid var(--gray-100);
 }
+
 .dropdown__body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.dropdown__body > * {
+.dropdown__body>* {
   margin-bottom: 8px;
 }
+
 .dropdown__footer {
   padding-top: 12px;
   border-bottom: 1px solid var(--gray-100);
 }
 
 .open {
-  display: block;
-}
-
-.show {
-  display: block;
+  display: block !important;
 }
 
 /* HERO */
 .hero {
-  width: 100%;
-  height: calc(100vh - 85px);
+  height: 65vh;
 
   padding: 24px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
     url("../assets/img/girl.jpg");
   background-position: top right;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero__title {
+
+.hero__title,
+.hero__description {
+  width: 100%;
   color: #ffffff;
 }
 
-/* SMARTPHONE ONLY */
-@media screen and (max-width: 599px) {
+.hero__description {
+  font-weight: 300;
+}
+
+
+.search-wrapper {
+  width: 100%;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.search-filter-button {
+  border-radius: 8px 0 0 8px;
+  width: 89px;
+  height: 42px;
+}
+.search-input {
+  width: calc(100% - 131px);
+  height: 42px;
+  border: none;
+  border-radius: 0;
+}
+.search-submit-button {
+  border-radius: 0 8px 8px 0;
+  width: 42px;
+  height: 42px;
+}
+.search-filter-button:hover,
+.search-submit-button:hover {
+  border: none;
+}
+.search-filter-button:focus,
+.search-submit-button:focus,
+.search-input:focus-visible {
+  outline: none;
+  border: none;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+/* EXTRA SMALL */
+@media screen and (max-width: 575px) {
+
+  .container,
+  .container--sm,
+  .container--md,
+  .container--lg,
+  .container--xl,
+  .container--fluid {
+    width: 100%;
+  }
+
   h1 {
     margin-top: 0;
     font-size: 2.488rem;
@@ -627,16 +718,152 @@ label,
   h5 {
     font-size: 1.2rem;
   }
+
+  .search-wrapper {
+    width: 100%;
+  }
 }
+
+/* SMALL */
+@media screen and (min-width: 576px) {
+
+  .container,
+  .container--sm {
+    width: 540px;
+    margin: auto;
+  }
+
+  .container--md,
+  .container--lg,
+  .container--xl,
+  .container--fluid {
+    width: 100%;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+  }
+
+  h2 {
+    font-size: 2.441rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+/* MEDIUM */
+@media screen and (min-width: 768px) {
+
+  .container,
+  .container--sm,
+  .container--md {
+    width: 720px;
+    margin: auto;
+  }
+
+  .container--lg,
+  .container--xl,
+  .container--fluid {
+    width: 100%;
+  }
+}
+
+/* LARGE */
+@media screen and (min-width: 992px) {
+
+  .container,
+  .container--sm,
+  .container--md,
+  .container--lg {
+    width: 960px;
+    margin: auto;
+  }
+
+  .container--xl,
+  .container--fluid {
+    width: 100%;
+  }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1200px) {
+
+  .container,
+  .container--sm,
+  .container--md,
+  .container--lg,
+  .container--xl {
+    width: 1140px;
+    margin: auto;
+  }
+
+  .container--fluid {
+    width: 100%;
+  }
+}
+
+
+/* SMARTPHONE ONLY */
+/* @media screen and (max-width: 599px) {
+  h1 {
+    margin-top: 0;
+    font-size: 2.488rem;
+  }
+
+  h2 {
+    font-size: 2.074rem;
+  }
+
+  h3 {
+    font-size: 1.728rem;
+  }
+
+  h4 {
+    font-size: 1.44rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+} */
 
 /* TABLET PORTRAIT */
-@media screen and (min-width: 600px) {
-}
+/* @media screen and (min-width: 600px) {
+  h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+  }
+
+  h2 {
+    font-size: 2.441rem;
+  }
+
+  h3 {
+    font-size: 1.953rem;
+  }
+
+  h4 {
+    font-size: 1.563rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+} */
 
 /* TABLET LANDSCAPE */
-@media screen and (min-width: 900px) {
-}
+/* @media screen and (min-width: 900px) {} */
 
 /* DESKTOP LANDSCAPE */
-@media screen and (min-width: 1200px) {
-}
+/* @media screen and (min-width: 1200px) {} */

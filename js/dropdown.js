@@ -1,30 +1,5 @@
-/* function openDropdown() {
-  document.getElementById("navbarDropdown").classList.toggle("show");
-}
-
-window.onclick = function (event) {
-  console.log("function");
-  if (!event.target.matches("#navbarToggle")) {
-    console.log("inside first if");
-    var dropdowns = document.getElementById("navbarDropdown");
-    console.log(dropdowns);
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      console.log("inside for");
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        console.log("inside second if");
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
- */
-
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("open");
+function openDropdownMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("open");
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -40,3 +15,15 @@ window.onclick = function (event) {
     }
   }
 };
+
+function filterDropdown() {
+  document.getElementById("filterDropdownContent").classList.toggle("open");
+}
+
+function openSearchbar() {
+  document.getElementById("navbar__searchbar").classList.toggle("open");
+}
+
+function openNavbarLinksCta() {
+  document.getElementById("navbar__links").classList.toggle("open");
+}

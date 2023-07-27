@@ -18,46 +18,100 @@
     <title>Desapega</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a href="#">
-          <img src="./assets/logo/logo-sm.png" alt="Desapega" />
+    <header class="navbar">
+      <nav class="container">
+        <a href="#" class="navbar__logo">
+          <img src="./assets/logo/logo-default.svg" height="40px" />
         </a>
 
-        <!--    <ul class="navbar__links">
-          <li><a class="link--secondary">Company</a></li>
-          <li><a class="link--secondary">Marketplace</a></li>
-          <li><a class="link--secondary">Features</a></li>
-          <li><a class="link--secondary">Team</a></li>
-          <li><a class="link--secondary">Contact</a></li>
-        </ul> -->
+        <ul class="navbar__links" id="navbar__links">
+          <li><a href="#" class="link--secondary">Anúncios recentes</a></li>
+          <li><a href="#" class="link--secondary">Categorias</a></li>
+        </ul>
 
-        <ul class="navbar__links">
-          <li><a href="./login.html" class="link--secondary">Entrar</a></li>
+        <ul class="navbar__links--cta" id="navbar__links--cta">
+          <li><a href="#" class="link--secondary">Entrar</a></li>
           <li>
-            <a
-              href="./signup.html"
-              class="link--button button--md button--primary"
-              >Criar conta</a
+            <a href="#" class="link--button button--primary button--md"
+              >Cadastre-se</a
             >
           </li>
         </ul>
 
-        <div class="dropdown navbar__toggle">
-          <button class="dropbtn fab fab--md" onclick="myFunction()">
+        <div class="navbar__toggles">
+          <button class="fab fab--md" onclick="openSearchbar()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="fab fab--md" onclick="openNavbarLinksCta()">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <div
-            id="myDropdown"
-            class="dropdown-content dropdown__options dropdown__options--float-right"
-          >
-            <div class="dropdown__body">
-              <a href="./login.html" class="link--secondary">Entrar</a>
-              <a
-                href="./signup.html"
-                class="link--button button--md button--primary"
-                >Criar conta</a
-              >
+        </div>
+
+        <div class="navbar__searchbar" id="navbar__searchbar">
+          <div class="search-wrapper dropdown">
+            <button
+              class="search-filter-button button--md button--secondary button-icon--right"
+              onclick="filterDropdown()"
+            >
+              Filtrar
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <input
+              type="text"
+              name="search-input"
+              id="search-input"
+              class="input--md search-input"
+            />
+
+            <button class="search-submit-button button--md button--primary">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <div
+              id="filterDropdownContent"
+              class="w-100 card dropdown__options"
+            >
+              <h4>Filtrar por</h4>
+
+              <div class="form-field">
+                <input
+                  type="radio"
+                  name="search-filter"
+                  id="searchByTitle"
+                  checked
+                />
+                <label for="searchByTitle">Título</label>
+              </div>
+              <div class="form-field">
+                <input
+                  type="radio"
+                  name="search-filter"
+                  id="searchByDescription"
+                />
+                <label for="searchByDescription">Descrição</label>
+              </div>
+
+              <div class="form-field">
+                <label for="">Mínimo</label>
+                <input class="input--md" type="text" name="" id="" />
+              </div>
+              <div class="form-field">
+                <label for="">Máximo</label>
+                <input class="input--md" type="text" name="" id="" />
+              </div>
+
+              <div class="form-field">
+                <label for="">Categoria</label>
+                <select class="input--md" name="" id="">
+                  <option value="">Option 1</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 1</option>
+                  <option value="">Option 1</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -66,22 +120,38 @@
 
     <main>
       <section class="hero">
-        <h1 class="hero__title">Simplifique sua vida</h1>
-        <p class="hero__description">
-          Compre e venda de forma fácil e segura no Desapega
-        </p>
+        <div class="container">
+          <h1 class="hero__title">Simplifique sua vida</h1>
+          <h4 class="hero__description">
+            Compre e venda de forma fácil e segura no Desapega
+          </h4>
+        </div>
       </section>
+
+      <!-- ANUNCIOS RECENTES -->
+      <!-- CATEGORIAS -->
+
+      <section class="container">Container</section>
+      <section class="container--sm">Container small</section>
+      <section class="container--md">Container medium</section>
+      <section class="container--lg">Container large</section>
+      <section class="container--xl">Container extra large</section>
+      <section class="container--fluid">Container fluid</section>
     </main>
 
     <footer class="footer">
-      <a href="/index.html" class="Desapega">
-        <img src="/assets/logo/logo-sm-dark.png" alt="Desapega" />
-      </a>
-
-      <p class="footer__info">
-        &copy 2023 Desapega Ltda. Todos os direitos reservados.
-      </p>
+      <div class="container">
+        <a href="/index.html" class="footer__logo">
+          <img src="/assets/logo/logo-dark.svg" alt="Desapega" height="37px" />
+        </a>
+        <p class="footer__info">
+          &copy 2023 Desapega Ltda. Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
     <script src="./js/dropdown.js"></script>
   </body>
 </html>
+<!-- 
+
+ -->
