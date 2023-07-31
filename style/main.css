@@ -346,14 +346,17 @@ button {
   color: var(--gray-800);
   background-color: var(--gray-200);
 }
+
 .button--secondary:hover {
   background-color: var(--gray-300);
   border: 1px solid var(--gray-100);
 }
+
 .button--secondary:focus {
   background-color: var(--gray-300);
   outline: 3px solid var(--gray-100);
 }
+
 .button--secondary:disabled {
   background-color: var(--gray-300);
   color: var(--gray-400);
@@ -569,6 +572,31 @@ label,
   width: 100%;
 }
 
+/* CARD */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 384px;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  background: #fff;
+
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 4px 6px -1px rgba(0, 0, 0, 0.10);
+}
+
+.card__title {}
+
+.card__description {}
+
+.card__price {}
+
+.card__footer {}
+
+
+
 /* DROPDOWN */
 .dropdown {
   position: relative;
@@ -626,14 +654,17 @@ label,
 
 /* HERO */
 .hero {
-  height: 65vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
 
+  height: 65vh;
   padding: 24px;
+
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-    url("../assets/img/girl.jpg");
-  background-position: top right;
+    url("../assets/img/girl.jpg") no-repeat top right;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .hero__title,
@@ -655,26 +686,31 @@ label,
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+
 .search-filter-button {
   border-radius: 8px 0 0 8px;
   width: 89px;
   height: 42px;
 }
+
 .search-input {
   width: calc(100% - 131px);
   height: 42px;
   border: none;
   border-radius: 0;
 }
+
 .search-submit-button {
   border-radius: 0 8px 8px 0;
   width: 42px;
   height: 42px;
 }
+
 .search-filter-button:hover,
 .search-submit-button:hover {
   border: none;
 }
+
 .search-filter-button:focus,
 .search-submit-button:focus,
 .search-input:focus-visible {
@@ -684,6 +720,10 @@ label,
 
 .w-100 {
   width: 100% !important;
+}
+
+.section__title {
+  margin: 16px 0;
 }
 
 /* EXTRA SMALL */
@@ -811,6 +851,7 @@ label,
   .container--fluid {
     width: 100%;
   }
+
 }
 
 

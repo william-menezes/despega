@@ -1,11 +1,15 @@
 .navbar {
-  background-color: var(--gray-100);
-  border-bottom: 1px solid var(--gray-500);
+  /* background-color: var(--gray-100); */
+  background-color: #fff;
   padding: 24px;
+  border-bottom: 1px solid var(--gray-200);
 }
 
-.container {
+.navbar>.container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar__links,
@@ -39,68 +43,68 @@
 /* SMARTPHONE ONLY */
 @media screen and (max-width: 599px) {
   .navbar__logo {
-      order: 1;
+    order: 1;
   }
 
   .navbar__toggles {
-      display: block;
-      order: 2;
+    display: block;
+    order: 2;
   }
 
   .navbar__searchbar {
-      order: 3;
+    order: 3;
   }
 
   .navbar__links,
   .navbar__links--cta {
-      display: none;
-      flex-direction: column;
-      order: 4;
+    display: none;
+    flex-direction: column;
+    order: 4;
 
-      width: 100%;
-      border-radius: 8px;
-      padding: 16px;
-      margin: 16px 0;
-      background-color: var(--gray-200);
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: var(--gray-100);
   }
 
   .navbar__links li:not(:last-child),
   .navbar__links--cta li:not(:last-child) {
-      margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 }
 
 /* TABLET PORTRAIT */
 @media screen and (min-width: 600px) {
   .navbar__logo {
-      order: 1;
+    order: 1;
   }
 
   .navbar__toggles {
-      display: block;
-      order: 2;
+    display: block;
+    order: 2;
   }
 
   .navbar__searchbar {
-      order: 3;
+    order: 3;
   }
 
   .navbar__links,
   .navbar__links--cta {
-      display: none;
-      flex-direction: column;
-      order: 4;
+    display: none;
+    flex-direction: column;
+    order: 4;
 
-      width: 100%;
-      border-radius: 8px;
-      padding: 16px;
-      margin: 16px 0;
-      background-color: var(--gray-200);
+    width: 100%;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: var(--gray-100);
   }
 
   .navbar__links li:not(:last-child),
   .navbar__links--cta li:not(:last-child) {
-      margin-bottom: 8px;
+    margin-bottom: 8px;
   }
 }
 
@@ -110,49 +114,49 @@
 /* DESKTOP LANDSCAPE */
 @media screen and (min-width: 1200px) {
   .navbar__logo {
-      order: 1;
+    order: 1;
   }
 
   .navbar__toggles {
-      margin-left: auto;
-      order: 3;
+    margin-left: auto;
+    order: 3;
   }
 
   .navbar__toggles button:last-child {
-      display: none;
+    display: none;
   }
 
   .navbar .container {
-      justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   .navbar__links {
-      order: 2;
+    order: 2;
   }
 
   .navbar__links--cta {
-      order: 4;
+    order: 4;
   }
 
   .navbar__links,
   .navbar__links--cta {
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-      width: fit-content;
-      background-color: transparent;
+    width: fit-content;
+    background-color: transparent;
 
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   .navbar__links li:not(:last-child),
   .navbar__links--cta li:not(:last-child) {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
 
   .navbar__searchbar {
-      order: 5;
+    order: 5;
   }
 }
