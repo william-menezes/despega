@@ -578,7 +578,6 @@ label,
   flex-direction: column;
   align-items: flex-start;
 
-  width: 384px;
   padding: 24px;
   border-radius: 8px;
   border: 1px solid var(--gray-200);
@@ -587,15 +586,37 @@ label,
   box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 4px 6px -1px rgba(0, 0, 0, 0.10);
 }
 
-.card__title {}
+.card__img {
+  width: 100%;
+  height: 200px;
+  background-color: var(--gray-100);
+}
 
-.card__description {}
+.card__title {
+  margin: 16px 0;
+}
 
-.card__price {}
+.card__description {
+  margin-bottom: 16px;
+}
 
-.card__footer {}
+.card__price {
+  margin-bottom: 16px;
+}
+ 
+.card__header,
+.card__body,
+.card__footer {
+  width: 100%;
+}
 
-
+.product-card {
+  /* min-width: 350px; */
+  transition: all .2s ease-in-out;
+}
+.product-card:hover {
+  transform: scale(1.01);
+}
 
 /* DROPDOWN */
 .dropdown {
@@ -724,6 +745,13 @@ label,
 
 .section__title {
   margin: 16px 0;
+}
+
+.section__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
 }
 
 /* EXTRA SMALL */
